@@ -1,50 +1,118 @@
 package com.inline.inline_task.Service;
 
+import com.inline.inline_task.DTO.LotDto;
 import jooqdata.tables.Lot;
 import jooqdata.tables.records.LotRecord;
 import org.jooq.DSLContext;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
+
 
 @Service
 public class LotService {
 
-    private final DSLContext dsl;
+    private static DSLContext dsl;
 
     public LotService(DSLContext dsl) {
         this.dsl = dsl;
     }
 
-    public List<LotRecord> findAll() {
-        return dsl.selectFrom(Lot.LOT).fetchInto(LotRecord.class);
-    }
-
-    public LotRecord findByCode(String code) {
+    public List<LotDto> findAll() {
         return dsl.selectFrom(Lot.LOT)
-                .where(Lot.LOT.CUSTOMER_CODE.eq(code))
-                .fetchOneInto(LotRecord.class);
+                .fetch()
+                .stream()
+                .map(record -> {
+                    LotDto lotDto = new LotDto();
+                    lotDto.lot_name = record.getLotName();
+                    lotDto.id = record.getId();
+                    lotDto.currency_code = record.getCurrencyCode();
+                    lotDto.customer_code = record.getCustomerCode();
+                    lotDto.date_delivery = record.getDateDelivery();
+                    lotDto.nds_rate = record.getNdsRate();
+                    lotDto.place_delivery = record.getPlaceDelivery();
+                    lotDto.price = record.getPrice();
+                    return lotDto;
+                })
+                .toList();
     }
 
-    public LotRecord findByName(String name) {
+    public List<LotDto> findByCode(String code) {
+        var records = dsl.selectFrom(Lot.LOT)
+                .where(Lot.LOT.CUSTOMER_CODE.eq(code))
+                .fetch();
+
+        if (records.isEmpty()) {
+            throw new RuntimeException("No lots found for customer code: " + code);
+        }
+
+        return records.stream()
+                .map(record -> {
+                    LotDto lotDto = new LotDto();
+                    lotDto.lot_name = record.getLotName();
+                    lotDto.id = record.getId();
+                    lotDto.currency_code = record.getCurrencyCode();
+                    lotDto.customer_code = record.getCustomerCode();
+                    lotDto.date_delivery = record.getDateDelivery();
+                    lotDto.nds_rate = record.getNdsRate();
+                    lotDto.place_delivery = record.getPlaceDelivery();
+                    lotDto.price = record.getPrice();
+                    return lotDto;
+                })
+                .toList();
+    }
+
+    public List<LotDto> findByName(String name) {
         return dsl.selectFrom(Lot.LOT)
                 .where(Lot.LOT.LOT_NAME.eq(name))
-                .fetchOneInto(LotRecord.class);
+                .fetch()
+                .stream()
+                .map(record->{
+                    LotDto lotDto = new LotDto();
+                    lotDto.lot_name = record.getLotName();
+                    lotDto.id = record.getId();
+                    lotDto.currency_code = record.getCurrencyCode();
+                    lotDto.customer_code = record.getCustomerCode();
+                    lotDto.date_delivery = record.getDateDelivery();
+                    lotDto.nds_rate = record.getNdsRate();
+                    lotDto.place_delivery = record.getPlaceDelivery();
+                    lotDto.price = record.getPrice();
+                    return lotDto;
+                })
+                .toList();
     }
 
-    public LotRecord findById(int id) {
+    public List<LotDto> findById(int id) {
         return dsl.selectFrom(Lot.LOT)
                 .where(Lot.LOT.ID.eq(id))
-                .fetchOneInto(LotRecord.class);
+                .fetch()
+                .stream()
+                .map(record -> {
+                    LotDto lotDto = new LotDto();
+                    lotDto.lot_name = record.getLotName();
+                    lotDto.id = record.getId();
+                    lotDto.currency_code = record.getCurrencyCode();
+                    lotDto.customer_code = record.getCustomerCode();
+                    lotDto.date_delivery = record.getDateDelivery();
+                    lotDto.nds_rate = record.getNdsRate();
+                    lotDto.place_delivery = record.getPlaceDelivery();
+                    lotDto.price = record.getPrice();
+                    return lotDto;
+                })
+                .toList();
     }
 
-    public LotRecord save(LotRecord lot) {
-        if (findById(lot.getId()) != null) {
-            dsl.executeUpdate(lot);
-        } else {
-            dsl.executeInsert(lot);
-        }
-        return lot;
+    public static LotDto save(LotDto lot) {
+      LotRecord record = dsl.newRecord(jooqdata.tables.Lot.LOT);
+      record.setCustomerCode(lot.customer_code);
+      record.setCurrencyCode(lot.currency_code);
+      record.setDateDelivery(lot.date_delivery);
+      record.setNdsRate(lot.nds_rate);
+      record.setPlaceDelivery(lot.place_delivery);
+      record.setPrice(lot.price);
+      record.setLotName(lot.lot_name);
+      record.setId(lot.id);
+      record.store();
+      return lot;
     }
 
 }

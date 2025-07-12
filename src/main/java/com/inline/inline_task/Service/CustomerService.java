@@ -9,7 +9,7 @@ import java.util.List;
 @Service
 public class CustomerService {
 
-    private final DSLContext dsl;
+    private static DSLContext dsl;
 
     public CustomerService(DSLContext dsl) {
         this.dsl = dsl;
@@ -36,20 +36,44 @@ public class CustomerService {
                 .toList();
     }
 
-    public CustomerRecord findByCode(String customerCode){
+    public List<CustomerDto> findByCode(String customerCode){
     return dsl.selectFrom(Customer.CUSTOMER)
             .where(Customer.CUSTOMER.CUSTOMER_CODE.eq(customerCode))
-            .fetchOneInto(CustomerRecord.class);
+            .fetch()
+            .stream()
+            .map(customerRecord -> {
+                CustomerDto dto = new CustomerDto();
+                dto.customerCode = customerRecord.getCustomerCode();
+                dto.customerName = customerRecord.getCustomerName();
+                dto.customerInn = customerRecord.getCustomerInn();
+                dto.customerKpp = customerRecord.getCustomerKpp();
+                dto.customerLegalAddress = customerRecord.getCustomerLegalAddress();
+                dto.customerPostalAddress = customerRecord.getCustomerPostalAddress();
+                dto.customerEmail = customerRecord.getCustomerEmail();
+                dto.customerCodeMain = customerRecord.getCustomerCodeMain();
+                dto.isOrganization = customerRecord.getIsOrganization();
+                dto.isPerson = customerRecord.getIsPerson();
+                return dto;
+            })
+            .toList();
     }
 
-    public CustomerRecord save(CustomerRecord customer) {
-        // Если существует, обновляем, иначе вставляем
-        if (findByCode(customer.getCustomerCode()) != null) {
-            dsl.executeUpdate(customer);
-        } else {
-            dsl.executeInsert(customer);
-        }
-        return customer;
+    public static CustomerDto save(CustomerDto dto) {
+
+
+        CustomerRecord record = dsl.newRecord(jooqdata.tables.Customer.CUSTOMER);
+        record.setCustomerCode(dto.customerCode);
+        record.setCustomerName(dto.customerName);
+        record.setCustomerInn(dto.customerInn);
+        record.setCustomerKpp(dto.customerKpp);
+        record.setCustomerLegalAddress(dto.customerLegalAddress);
+        record.setCustomerPostalAddress(dto.customerPostalAddress);
+        record.setCustomerEmail(dto.customerEmail);
+        record.setCustomerCodeMain(dto.customerCodeMain);
+        record.setIsOrganization(dto.isOrganization);
+        record.setIsPerson(dto.isPerson);
+        record.store(); // insert/update
+        return dto;
     }
 
 }
