@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f3a57edc-b312-4339-a211-c816292e2d8f" name="Changes" comment="Customer(Controller, DTO(Getters &amp;&amp; Setters), Service)&#10;Lot (Controller, Service DTO(Getters &amp;&amp; Setters))">
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inline/inline_task/Controller/CustomerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inline/inline_task/Controller/LotController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inline/inline_task/DTO/CustomerDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inline/inline_task/DTO/LotDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inline/inline_task/InlineTaskApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inline/inline_task/Service/CustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inline/inline_task/Service/LotService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jooq/jooqdata/DefaultCatalog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jooq/jooqdata/Keys.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jooq/jooqdata/Purchase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jooq/jooqdata/Tables.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jooq/jooqdata/tables/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jooq/jooqdata/tables/Lot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jooq/jooqdata/tables/records/CustomerRecord.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jooq/jooqdata/tables/records/LotRecord.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/inline_task/InlineTaskApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ShakurDmitrii&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ShakurDmitrii/inline.git&quot;,
+    &quot;accountId&quot;: &quot;18e87f44-92f8-457b-b500-e6b9f6f14db1&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2zb8MNEDlZg3gFMb05VRq4rpNox" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build inline_task.executor": "Run",
+    "Gradle.inline_task [dependencies].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.InlineTaskApplication.executor": "Run",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/shakur/IdeaProjects/inline_task",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Spring Boot.InlineTaskApplication">
+    <configuration name="inline_task [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="InlineTaskApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="inline_task.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.inline.inline_task.InlineTaskApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.inline_task [dependencies]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.25410.129" />
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-IU-251.25410.129" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f3a57edc-b312-4339-a211-c816292e2d8f" name="Changes" comment="" />
+      <created>1751988365853</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1751988365853</updated>
+      <workItem from="1751988368239" duration="3929000" />
+      <workItem from="1752246714770" duration="6334000" />
+      <workItem from="1752312610580" duration="7442000" />
+      <workItem from="1752418813067" duration="901000" />
+    </task>
+    <task id="LOCAL-00001" summary="__init__">
+      <option name="closed" value="true" />
+      <created>1751990710347</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1751990710347</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Customer(Controller, DTO, Service)&#10;Lot (Controller, Service)&#10;JOOQ classes">
+      <option name="closed" value="true" />
+      <created>1752251611196</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1752251611197</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Customer(Controller, DTO(Getters &amp;&amp; Setters), Service)&#10;Lot (Controller, Service DTO(Getters &amp;&amp; Setters))">
+      <option name="closed" value="true" />
+      <created>1752342894184</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1752342894184</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="__init__" />
+    <MESSAGE value="Customer(Controller, DTO, Service)&#10;Lot (Controller, Service)&#10;JOOQ classes" />
+    <MESSAGE value="Customer(Controller, DTO(Getters &amp;&amp; Setters), Service)&#10;Lot (Controller, Service DTO(Getters &amp;&amp; Setters))" />
+    <option name="LAST_COMMIT_MESSAGE" value="Customer(Controller, DTO(Getters &amp;&amp; Setters), Service)&#10;Lot (Controller, Service DTO(Getters &amp;&amp; Setters))" />
+  </component>
+</project>
