@@ -75,5 +75,28 @@ public class CustomerService {
         record.store(); // insert/update
         return dto;
     }
+    public static CustomerDto update(String customerCode, CustomerDto dto) {
+        CustomerRecord record = dsl.fetchOne(jooqdata.tables.Customer.CUSTOMER,
+                jooqdata.tables.Customer.CUSTOMER.CUSTOMER_CODE.eq(customerCode));
+
+        if (record == null) {
+            throw new RuntimeException("Customer with code " + customerCode + " not found");
+        }
+
+        // Можно обновлять все поля, включая customerCode, если надо
+        record.setCustomerCode(dto.customerCode);
+        record.setCustomerName(dto.customerName);
+        record.setCustomerInn(dto.customerInn);
+        record.setCustomerKpp(dto.customerKpp);
+        record.setCustomerLegalAddress(dto.customerLegalAddress);
+        record.setCustomerPostalAddress(dto.customerPostalAddress);
+        record.setCustomerEmail(dto.customerEmail);
+        record.setCustomerCodeMain(dto.customerCodeMain);
+        record.setIsOrganization(dto.isOrganization);
+        record.setIsPerson(dto.isPerson);
+
+        record.store(); // обновление записи
+        return dto;
+    }
 
 }
