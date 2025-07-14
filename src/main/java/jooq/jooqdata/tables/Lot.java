@@ -6,8 +6,6 @@ package jooqdata.tables;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.Arrays;
-import java.util.List;
 import java.util.function.Function;
 
 import jooqdata.Keys;
@@ -134,11 +132,6 @@ public class Lot extends TableImpl<LotRecord> {
     @Override
     public UniqueKey<LotRecord> getPrimaryKey() {
         return Keys.LOT_PK;
-    }
-
-    @Override
-    public List<UniqueKey<LotRecord>> getUniqueKeys() {
-        return Arrays.asList(Keys.LOT_UNIQUE);
     }
 
     @Override

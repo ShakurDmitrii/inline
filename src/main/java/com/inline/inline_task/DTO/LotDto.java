@@ -1,9 +1,12 @@
 package com.inline.inline_task.DTO;
 
+import com.fasterxml.jackson.databind.PropertyNamingStrategies;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
+
 import javax.xml.crypto.Data;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-
+@JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 public class LotDto {
     public int id;
     public String lot_name;

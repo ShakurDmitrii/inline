@@ -29,5 +29,4 @@ public class Keys {
     public static final UniqueKey<CustomerRecord> CUSTOMER_PK = Internal.createUniqueKey(Customer.CUSTOMER, DSL.name("customer_pk"), new TableField[] { Customer.CUSTOMER.CUSTOMER_CODE }, true);
     public static final UniqueKey<CustomerRecord> CUSTOMER_UNIQUE = Internal.createUniqueKey(Customer.CUSTOMER, DSL.name("customer_unique"), new TableField[] { Customer.CUSTOMER.CUSTOMER_CODE_MAIN }, true);
     public static final UniqueKey<LotRecord> LOT_PK = Internal.createUniqueKey(Lot.LOT, DSL.name("lot_pk"), new TableField[] { Lot.LOT.ID }, true);
-    public static final UniqueKey<LotRecord> LOT_UNIQUE = Internal.createUniqueKey(Lot.LOT, DSL.name("lot_unique"), new TableField[] { Lot.LOT.CUSTOMER_CODE }, true);
 }

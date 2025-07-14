@@ -4,17 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3a57edc-b312-4339-a211-c816292e2d8f" name="Changes" comment="Move to folder backend">
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Customer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Home.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/inline/inline_task/WebConfig.java" afterDir="false" />
+    <list default="true" id="f3a57edc-b312-4339-a211-c816292e2d8f" name="Changes" comment="Edit service">
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Lot.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/inline/inline_task/Controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inline/inline_task/Controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/inline/inline_task/Service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inline/inline_task/Service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Customer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Customer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inline/inline_task/Controller/LotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inline/inline_task/Controller/LotController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inline/inline_task/DTO/LotDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inline/inline_task/DTO/LotDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inline/inline_task/Service/LotService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inline/inline_task/Service/LotService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inline/inline_task/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inline/inline_task/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jooq/jooqdata/Keys.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jooq/jooqdata/Keys.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jooq/jooqdata/tables/Lot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jooq/jooqdata/tables/Lot.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,6 +151,7 @@
       <workItem from="1751988368239" duration="3929000" />
       <workItem from="1752246714770" duration="6334000" />
       <workItem from="1752312610580" duration="7442000" />
+      <workItem from="1752505325005" duration="10923000" />
     </task>
     <task id="LOCAL-00001" summary="__init__">
       <option name="closed" value="true" />
@@ -183,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752438943144</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Edit service">
+      <option name="closed" value="true" />
+      <created>1752449088116</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1752449088116</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,6 +204,7 @@
     <MESSAGE value="Customer(Controller, DTO, Service)&#10;Lot (Controller, Service)&#10;JOOQ classes" />
     <MESSAGE value="Customer(Controller, DTO(Getters &amp;&amp; Setters), Service)&#10;Lot (Controller, Service DTO(Getters &amp;&amp; Setters))" />
     <MESSAGE value="Move to folder backend" />
-    <option name="LAST_COMMIT_MESSAGE" value="Move to folder backend" />
+    <MESSAGE value="Edit service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit service" />
   </component>
 </project>
