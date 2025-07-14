@@ -6,6 +6,7 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 
 import Home from './pages/Home';
 import Customer from "./pages/Customer";
+import Lot from "./pages/Lot";
 
 function App() {
     const navigate = useNavigate();
@@ -61,6 +62,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/customer" element={<Customer/>}/>
+                    <Route path="/lots" element={<Lot/>}/>
 
                 </Routes>
             </div>

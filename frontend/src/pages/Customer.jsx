@@ -8,6 +8,9 @@ export default function Customer() {
     const [newCustomer, setNewCustomer] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [searchCode, setSearchCode] = useState('');
+    const filtered = customers.filter(c => c.customerCode.includes(searchCode));
+
 
     useEffect(() => {
         fetch('http://localhost:8080/api/customers')
@@ -126,9 +129,23 @@ export default function Customer() {
                 rowTop={{
                     left: (
                         <div>
+                            <div style={{ marginBottom: 16 }}>
+                                <input
+                                    type="text"
+                                    placeholder="Поиск по коду"
+                                    value={searchCode}
+                                    onChange={(e) => setSearchCode(e.target.value)}
+                                    style={{ marginRight: 8 }}
+                                />
+                                <button onClick={() => setSearchCode('')}>Очистить</button>
+                            </div>
+
                             <ul>
-                                {customers.map((customer) => (
-                                    <li key={customer.customerCode} onClick={() => handleEdit(customer.customerCode)} style={{cursor: 'pointer'}}>
+                                {customers
+                                    .filter((c) => c.customerCode.includes(searchCode))
+                                    .map((customer) => (
+
+                                        <li key={customer.customerCode} onClick={() => handleEdit(customer.customerCode)} style={{cursor: 'pointer'}}>
                                         {customer.customerName} - {customer.customerEmail}
                                     </li>
                                 ))}
